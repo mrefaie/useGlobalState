@@ -1,0 +1,39 @@
+{
+  "name": "useglobalstate",
+  "version": "1.0.0",
+  "description": "React simple useGlobalState hook for managing the global state",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrefaie/useGlobalState.git"
+  },
+  "keywords": [
+    "React Global State",
+    "React Native Global State",
+    "Global State",
+    "State Management",
+    "Redux",
+    "Simple Global State"
+  ],
+  "author": "Mohamed El-Refaie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrefaie/useGlobalState/issues"
+  },
+  "homepage": "https://github.com/mrefaie/useGlobalState#readme",
+  "peerDependencies": {
+    "prop-types": "^15.0.0",
+    "react": "^16.9.0"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
+    },
+    "react-native": {
+      "optional": true
+    }
+  }
+}
