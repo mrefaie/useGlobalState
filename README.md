@@ -118,6 +118,8 @@ Consider that the components in the example above are rendered in the same page.
 
 [Normal Global State](https://codesandbox.io/s/useglobalstate-basic-usage-xnmo3)
 
-[Decoupled Global State]()
+[Decoupled Global State](https://codesandbox.io/s/useglobalstate-decoupled-ps2u4)
+
+---
 
 With ❤️ from Mohamed El-Refaie
