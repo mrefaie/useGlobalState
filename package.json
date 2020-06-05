@@ -1,5 +1,5 @@
 {
-  "name": "react-useglobalstate",
+  "name": "@morefaie/react-useglobalstate",
   "version": "0.1.0",
   "description": "React simple useGlobalState hook for managing the global state",
   "main": "index.js",
