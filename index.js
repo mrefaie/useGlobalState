@@ -143,7 +143,7 @@ const GlobalState = (props) => {
     );
 
   // Render Providers
-  return <>{providers}</>;
+  return <React.Fragment>{providers}</React.Fragment>;
 };
 
 GlobalState.propTypes = {
