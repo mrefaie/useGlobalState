@@ -143,7 +143,7 @@ const GlobalState = (props) => {
     );
 
   // Render Providers
-  return <React.Fragment>{providers}</React.Fragment>;
+  return <React.Fragment>{providers || null}</React.Fragment>;
 };
 
 GlobalState.propTypes = {
@@ -167,7 +167,7 @@ GlobalState.propTypes = {
 GlobalState.defaultProps = {
   decoupled: false,
   state: {},
-  children: <></>,
+  children: <React.Fragment></React.Fragment>,
 };
 
 export default GlobalState;
