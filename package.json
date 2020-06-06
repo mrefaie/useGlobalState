@@ -9,6 +9,8 @@
   "jsnext:main": "dist/react-useglobalstate.esm.js",
   "scripts": {
     "build": "rollup -c",
+    "release": "np --no-tests",
+    "version": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
