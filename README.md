@@ -1,5 +1,7 @@
 <h1 align="center">react-useglobalstate</h1>
 
+![npm](https://img.shields.io/npm/v/@morefaie/react-useglobalstate)
+
 ## Introduction
 
 Many developers are looking for a solution to handle a react app global state away from `Redux`. So, I have created this package to simplify global state management for small and medium sized apps
