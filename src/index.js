@@ -42,9 +42,11 @@ export function useGlobalState(globalStateKey) {
   // Consume Corresponding Provider
   let globalStateScoppedData, localStateSetter;
   try {
-    [globalStateScoppedData, localStateSetter] = React.useContext(
+    const { state, stateSetter } = React.useContext(
       GlobalStateContexts[globalStateScope]
     );
+    globalStateScoppedData = state;
+    localStateSetter = stateSetter;
   } catch (error) {
     throw new Error("undefined global state " + globalStateKey);
   }
@@ -54,6 +56,7 @@ export function useGlobalState(globalStateKey) {
     ((value) => {
       localStateSetter((prevState) => {
         if (!GlobalStateDecoubled) {
+          // Normal Global State
           return {
             ...prevState,
             [globalStateVariable]:
@@ -62,6 +65,7 @@ export function useGlobalState(globalStateKey) {
                 : value,
           };
         } else {
+          // Decoupled Global State
           return {
             ...prevState,
             [globalStateScope]: {
@@ -75,6 +79,7 @@ export function useGlobalState(globalStateKey) {
         }
       });
     });
+
   return globalStateScoppedData
     ? [
         globalStateScoppedData[globalStateVariable],
@@ -118,6 +123,11 @@ const GlobalState = (props) => {
     }
   }
 
+  // Update Setters Ref
+  Object.keys(ProvidersValues).forEach((objKey) => {
+    ProvidersValues[objKey]["stateSetter"] = localStateSetter;
+  });
+
   // Create Providers Tree
   const providers = Object.keys(GlobalStateContexts)
     .reverse()
@@ -127,13 +137,14 @@ const GlobalState = (props) => {
           GlobalStateContexts[key].Provider,
           {
             value:
-              ProvidersValues[key] && ProvidersValues[key][0] === state[key]
+              ProvidersValues[key] &&
+              ProvidersValues[key]["state"] === state[key]
                 ? ProvidersValues[key]
                 : (() => {
-                    ProvidersValues[key] = [
-                      GlobalStateDecoubled ? state[key] : state,
-                      localStateSetter,
-                    ];
+                    ProvidersValues[key] = {
+                      state: GlobalStateDecoubled ? state[key] : state,
+                      stateSetter: localStateSetter,
+                    };
                     return ProvidersValues[key];
                   })(),
           },

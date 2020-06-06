@@ -1,6 +1,9 @@
 <h1 align="center">react-useglobalstate</h1>
 
 ![npm](https://img.shields.io/npm/v/@morefaie/react-useglobalstate)
+![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@morefaie/react-useglobalstate)
+![npm](https://img.shields.io/npm/dm/@morefaie/react-useglobalstate)
+![NPM](https://img.shields.io/npm/l/@morefaie/react-useglobalstate)
 
 ## Introduction
 
