@@ -2,8 +2,13 @@
   "name": "@morefaie/react-useglobalstate",
   "version": "1.0.1",
   "description": "React simple useGlobalState hook for managing the global state",
-  "main": "index.js",
+  "source": "src/index.js",
+  "main": "dist/react-useglobalstate.js",
+  "umd:main": "dist/react-useglobalstate.umd.js",
+  "module": "dist/react-useglobalstate.esm.js",
+  "jsnext:main": "dist/react-useglobalstate.esm.js",
   "scripts": {
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +29,10 @@
     "url": "https://github.com/mrefaie/useGlobalState/issues"
   },
   "homepage": "https://github.com/mrefaie/useGlobalState#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.9.6",
+    "prop-types": "^15.0.0"
+  },
   "peerDependencies": {
     "prop-types": "^15.0.0",
     "react": "^16.9.0"
@@ -44,11 +53,11 @@
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-syntax-import-meta": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.9.6",
+    "babel-plugin-transform-async-to-promises": "^0.8.4",
     "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-flow": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
-    "@babel/runtime": "^7.9.6",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
@@ -71,13 +80,20 @@
     "flow-copy-source": "^2.0.9",
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
-    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1",
     "typescript": "^3.9.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "rollup": "^1.0.0",
+    "rollup-plugin-babel": "^4.2.0",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-filesize": "^6.0.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-uglify": "^6.0.0"
   },
   "publishConfig": {
     "access": "public"

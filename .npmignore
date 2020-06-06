@@ -1,0 +1,9 @@
+.github
+.babelrc
+coverage
+src
+test
+.*
+*.md
+codecov.yml
+.travis.yml

@@ -1,7 +1,10 @@
+*.DS_Store
 node_modules
+dist
 lib
 coverage
 yarn.lock
+npm-debug.log
 
 # misc
 .vscode
