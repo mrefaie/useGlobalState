@@ -104,14 +104,14 @@ const SampleComponent = () => {
 };
 
 const AnotherSampleComponent = () => {
-  const [appLang, setAppLang] = useGlobalState("global.lang");
+  const [appLang, setAppLang] = useGlobalState("global.language");
 
   // ...
 };
 
 const YetAnotherSampleComponent = () => {
   const [isUserLoggedIn, setIsUserLoggedIn] = useGlobalState("user.isLoggedIn");
-  const [appLang, setAppLang] = useGlobalState("global.lang");
+  const [appLang, setAppLang] = useGlobalState("global.language");
 
   // ...
 };
