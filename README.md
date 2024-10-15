@@ -1,4 +1,6 @@
-<h1 align="center">react-useglobalstate</h1>
+<h1 align="center">react-useglobalstate [DEPRECATED]</h1>
+
+⚠️ **DEPRECATION NOTICE:** This package is no longer maintained and has reached its end of life. Please consider using alternative state management solutions.
 
 ![npm](https://img.shields.io/npm/v/@morefaie/react-useglobalstate)
 ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@morefaie/react-useglobalstate)
